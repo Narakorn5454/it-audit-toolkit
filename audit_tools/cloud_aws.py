@@ -374,3 +374,11 @@ def demo_files(as_of: date | None = None) -> list[tuple[bytes, str]]:
                               "PolicyRoles": [{"RoleName": "OrganizationAccountAccessRole"}]}, indent=2),
                   "admin_policy_entities.json"))
     return [(c.encode(), n) for c, n in files]
+
+
+# หมวดความเสี่ยงสำหรับเปรียบเทียบข้าม cloud (ใช้ใน cloud_summary)
+CATEGORY = {"AWS-01": "Identity & MFA", "AWS-02": "Privileged access", "AWS-03": "Privileged access",
+            "AWS-04": "Identity & MFA", "AWS-05": "Identity & MFA", "AWS-06": "Identity & MFA",
+            "AWS-07": "Identity & MFA", "AWS-08": "Identity & MFA", "AWS-09": "Network exposure",
+            "AWS-10": "Network exposure", "AWS-11": "Storage & data", "AWS-12": "Logging",
+            "AWS-13": "Privileged access"}
