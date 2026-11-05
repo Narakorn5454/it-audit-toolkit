@@ -85,8 +85,8 @@ Results are indicators that support, but do not replace, professional judgment. 
 
 ## About the author
 
-Built by **[Your Name]**, IT Auditor with experience in ITGC, IT risk and compliance.
-💼 [LinkedIn](www.linkedin.com/in/narakorn-poomsuwan-4261052b2) · ✉️ [narakornpoomsuwan@gmail.com]
+Built by **Narakorn Poomsuwan**, IT Auditor with experience in ITGC, IT risk and compliance.
+💼 (www.linkedin.com/in/narakorn-poomsuwan-4261052b2) · ✉️ [narakornpoomsuwan@gmail.com]
 
 ---
 © 2026 Narakorn Poomsuwan. Source available for evaluation; commercial use requires permission (see LICENSE).
