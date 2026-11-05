@@ -10,34 +10,36 @@
 
 **IT Audit Toolkit** — Python, pandas, Streamlit, Claude API · [github.com/your-username/it-audit-toolkit] · [live demo link]
 
-- Built a 13-tool audit analytics suite automating core IT audit procedures across ITGC, IAM, cloud, data analytics, third-party risk, PDPA and AI governance, with 200+ checks mapped to ISO/IEC 27001:2022, CIS Benchmarks, COBIT 2019, ISA 240 and ISO/IEC 42001.
+- Built a 14-tool audit analytics suite automating core IT audit procedures across ITGC, IAM, cloud, data analytics, third-party risk, PDPA and AI governance, with 240+ checks mapped to ISO/IEC 27001:2022, CIS Benchmarks (incl. AWS, Azure, GCP), COBIT 2019, ISA 240 and ISO/IEC 42001.
 - Developed full-population journal entry testing (14 risk-scored tests, Benford's Law with MAD/chi-square, sequence-gap analysis) that reads SAP exports and ranks entries for vouching, replacing sample-based selection.
 - Designed cross-system SoD analysis linking user identities across ERP, banking and HR systems to detect toxic combinations, inherently conflicting role designs and mitigated conflicts.
-- Wrote read-only evidence-collection scripts (PowerShell, shell, AWS CLI) and parsers for Windows secedit/auditpol, Linux sshd/PAM, AWS credential reports and Entra ID sign-in logs, enabling configuration reviews without privileged access.
+- Built a multi-cloud configuration review for AWS, Microsoft Azure and Google Cloud (CIS-aligned: identity and MFA, privileged roles, network exposure, storage, logging) with a cross-cloud risk comparison by category.
+- Wrote read-only evidence-collection scripts (PowerShell, shell, AWS CLI, Azure CLI/Microsoft Graph, gcloud) and parsers for Windows secedit/auditpol, Linux sshd/PAM and cloud exports, enabling reviews without privileged access.
+- Built an interface and data-migration reconciliation tool (record counts, control totals, missing/extra/duplicate records, field-level mismatches with tolerance, group totals) that handles differing column names, Buddhist-era dates and formatted amounts, e.g. Core Banking to GL.
 - Applied GenAI to audit: an AI-assisted policy gap review using the Claude API with an offline keyword fallback, plus an ISO/IEC 42001 and NIST AI RMF assessment for auditing AI.
-- Ensured reliability with a 19-test automated suite that validates detection against planted anomalies; every report discloses skipped checks and the parameters used.
+- Ensured reliability with a 24-test automated suite that validates detection against planted anomalies; every report discloses skipped checks and the parameters used.
 
 > ถ้าเรซูเม่ยาวเกิน ให้เลือก 3 bullet แรก + bullet เรื่อง GenAI
 
 ### หัวข้อ Summary / Profile (ใส่บนสุด)
 
-> IT Auditor with [X] years of experience in ITGC, IT risk and compliance, who builds data-driven audit tools. Developed a 13-tool Python audit analytics suite covering IAM, cloud (AWS), journal entry testing, PDPA and AI governance. Focused on full-population testing, automation and translating technology risk into business impact.
+> IT Auditor with [X] years of experience in ITGC, IT risk and compliance, who builds data-driven audit tools. Developed a 14-tool Python audit analytics suite covering IAM, cloud (AWS), journal entry testing, PDPA and AI governance. Focused on full-population testing, automation and translating technology risk into business impact.
 
 ### หัวข้อ Skills (คำที่ระบบคัดเรซูเม่ ATS ค้นหา)
 
 - **Audit & Frameworks:** ITGC, SOX-style controls testing, COBIT 2019, ISO/IEC 27001:2022, CIS Benchmarks, ISA 240 (journal entry testing), Thailand PDPA, ISO/IEC 42001, NIST AI RMF, IIA Global Internal Audit Standards
-- **Technical areas:** Identity & Access Management, Segregation of Duties, Change Management, Log analysis, System hardening (Windows/Linux), AWS security (IAM, S3, Security Groups, CloudTrail), Third-party risk
-- **Data & Automation:** Python (pandas, NumPy), Streamlit, Excel automation (openpyxl), CAATs, Benford's Law, PowerShell, Bash, AWS CLI, pytest, Generative AI (Claude API)
+- **Technical areas:** Identity & Access Management, Segregation of Duties, Change Management, Log analysis, System hardening (Windows/Linux), Cloud security: AWS (IAM, S3, Security Groups, CloudTrail), Microsoft Azure (Entra ID, RBAC, NSG, Defender for Cloud), Google Cloud (IAM, VPC firewall, Cloud Storage, Cloud SQL), Third-party risk
+- **Data & Automation:** Python (pandas, NumPy), Streamlit, Excel automation (openpyxl), CAATs, Benford's Law, PowerShell, Bash, AWS CLI, Azure CLI, gcloud, pytest, Generative AI (Claude API)
 
 ---
 
 ## 2. LinkedIn
 
 ### Headline (ใต้ชื่อ)
-> IT Auditor | ITGC · IAM · Cloud · Data Analytics · AI Governance | Building audit automation with Python
+> IT Auditor | ITGC · IAM · Multi-Cloud (AWS/Azure/GCP) · Data Analytics · AI Governance | Building audit automation with Python
 
 ### About (ย่อหน้าแรกสำคัญที่สุด)
-> I'm an IT auditor who believes audit should test everything, not just a sample. I built the IT Audit Toolkit: 13 open tools that automate user access reviews, cross-system SoD, change management, AWS configuration reviews, journal entry testing with Benford's Law, PDPA and AI governance assessments. Each tool turns hours of manual work into a repeatable test with workpaper-ready output.
+> I'm an IT auditor who believes audit should test everything, not just a sample. I built the IT Audit Toolkit: 14 open tools that automate user access reviews, cross-system SoD, change management, AWS configuration reviews, journal entry testing with Benford's Law, PDPA and AI governance assessments. Each tool turns hours of manual work into a repeatable test with workpaper-ready output.
 >
 > Experience: ITGC, IT risk, compliance [เติมประสบการณ์จริง]
 > Looking for: IT Audit / IT Risk / Technology Assurance roles
@@ -52,12 +54,13 @@ Profile → Add section → Projects → ใส่ชื่อ, ลิงก์,
 
 > Audit is moving from sampling to full-population testing, and from ITGC to IAM, cloud and AI.
 >
-> So I built an **IT Audit Toolkit**: 13 free tools that turn common IT audit procedures into repeatable tests:
+> So I built an **IT Audit Toolkit**: 14 free tools that turn common IT audit procedures into repeatable tests:
 >
 > 🔍 User access review & cross-system SoD
 > 🔄 Change management: deployments vs. tickets
+> 🔁 Interface & data-migration reconciliation
 > 🕵️ Login anomalies: brute force, password spraying, impossible travel
-> ☁️ AWS configuration review (CIS-aligned)
+> ☁️ Multi-cloud configuration review: AWS, Azure, Google Cloud (CIS-aligned)
 > 📒 Journal entry testing with Benford's Law
 > 🇹🇭 PDPA, vendor risk & AI governance (ISO 42001) assessments
 > 📑 AI-assisted policy gap review
@@ -84,7 +87,7 @@ Profile → Add section → Projects → ใส่ชื่อ, ลิงก์,
 
 ### แนะนำตัว 60 วินาที
 > "ผมเป็น IT Auditor มีประสบการณ์ด้าน [ITGC / ...] ช่วงที่ผ่านมาผมสังเกตว่างานตรวจหลายอย่างยังทำด้วยการสุ่มตัวอย่างและ Excel
-> ผมจึงพัฒนา IT Audit Toolkit ขึ้นมา 13 เครื่องมือ ที่ทดสอบข้อมูลได้ทั้งประชากร ครอบคลุมตั้งแต่ ITGC พื้นฐาน
+> ผมจึงพัฒนา IT Audit Toolkit ขึ้นมา 14 เครื่องมือ ที่ทดสอบข้อมูลได้ทั้งประชากร ครอบคลุมตั้งแต่ ITGC พื้นฐาน
 > ไปจนถึง IAM, AWS, journal entry testing และการตรวจ AI governance ซึ่งตรงกับทิศทางที่งาน IT Audit กำลังไป
 > ผมอยากนำทักษะทั้งด้านการตรวจสอบและ automation นี้มาช่วยให้ทีมของคุณตรวจได้ครอบคลุมขึ้นในเวลาที่น้อยลงครับ/ค่ะ"
 
@@ -101,11 +104,18 @@ Profile → Add section → Projects → ใส่ชื่อ, ลิงก์,
 - **A:** เชื่อมตัวตนผู้ใช้ด้วยรหัสพนักงาน รวมสิทธิ์จาก ERP, Banking, HR แล้วเทียบกับชุดกฎ แยกประเภทความขัดแย้งในระบบเดียว ข้ามระบบ Role ที่ออกแบบผิด และที่มีการควบคุมชดเชย
 - **R:** พบกรณีที่ตรวจแยกระบบจะไม่เห็น เช่น พนักงานแก้ข้อมูลบัญชีธนาคารผู้ขายใน ERP และปล่อยเงินใน Banking ได้เอง
 
-**3) AWS Review — เหมาะกับตำแหน่งที่ต้องการ Cloud**
-- **A:** เขียนสคริปต์ AWS CLI แบบอ่านอย่างเดียวให้หน่วยรับตรวจรันเอง (ใช้ policy SecurityAudit) แล้ววิเคราะห์ตามแนว CIS AWS Foundations
-- **R:** ผู้ตรวจไม่ต้องขอสิทธิ์เข้าบัญชี AWS ลดความเสี่ยงและขั้นตอนอนุมัติ ตรวจได้ทั้ง root MFA, access key เก่า, security group ที่เปิด SSH/DB สู่อินเทอร์เน็ต, S3 สาธารณะ, CloudTrail
+**3) Multi-Cloud Review — เหมาะกับตำแหน่งที่ต้องการ Cloud**
+- **S:** องค์กรใช้หลาย cloud (AWS, Azure, Google Cloud) แต่ทีมตรวจมักตรวจได้แค่ตัวเดียว หรือต้องขอสิทธิ์เข้าบัญชีลูกค้า
+- **A:** เขียนสคริปต์อ่านอย่างเดียวให้หน่วยรับตรวจรันเองใน Cloud Shell ของแต่ละ cloud (AWS SecurityAudit, Azure Reader/Security Reader/Global Reader, GCP Viewer/Security Reviewer) แล้ววิเคราะห์ตามแนว CIS Foundations Benchmark และจัดหมวดความเสี่ยงเดียวกันเพื่อเทียบข้าม cloud
+- **R:** ผู้ตรวจไม่ต้องขอสิทธิ์เข้าบัญชี cloud และเห็นภาพรวมว่า cloud ไหนอ่อนด้านใด เช่น Identity/MFA บน AWS แต่ Network exposure บน Azure และ GCP ใช้วางลำดับความสำคัญและสื่อสารกับผู้บริหารได้ทันที
+- **รายละเอียดที่แสดงความเข้าใจจริง:** ระบบไม่นับ service account ที่ Google สร้างและจัดการเอง (ลูกค้าแก้ไม่ได้) เป็นข้อตรวจพบ เพื่อลด false positive
 
-**4) AI Governance + AI Policy Review — เหมาะกับทุกตำแหน่ง (หัวข้อที่กำลังเป็นที่ต้องการ)**
+**4) Interface & Data Reconciliation — เหมาะกับ Application Audit / ธนาคาร / งาน data migration**
+- **S:** การตรวจ interface ระหว่าง Core Banking กับ GL มักดูแค่จำนวนรายการและยอดรวมจากรายงานสรุป
+- **A:** สร้างเครื่องมือจับคู่รายการทีละรายการด้วยรหัสอ้างอิง รองรับชื่อคอลัมน์ต่างกัน วันที่ พ.ศ. ตัวเลขมีจุลภาค กำหนดผลต่างที่ยอมรับได้ และกระทบยอดรายวัน/รายสาขา
+- **R:** ในข้อมูลทดสอบ จำนวนรายการ 2 ระบบเท่ากันพอดี (480 = 480) แต่จริง ๆ มีรายการตกหล่น 4 รายการ เกินมา 2 รายการ (รวมรายการปรับปรุงด้วยมือ 49,900 บาท) ส่งซ้ำ 1 และยอดเงินไม่ตรง 3 รายการ แสดงว่าการกระทบเฉพาะจำนวนรายการไม่เพียงพอ
+
+**5) AI Governance + AI Policy Review — เหมาะกับทุกตำแหน่ง (หัวข้อที่กำลังเป็นที่ต้องการ)**
 - **A:** ทำทั้ง "Audit of AI" (แบบประเมิน 26 ข้อจาก ISO/IEC 42001 และ NIST AI RMF รวม GenAI) และ "AI for Audit" (ให้ Claude สอบทานนโยบายเทียบ ISO 27001)
 - **ข้อควรระวังที่ควรพูดเอง (แสดงวุฒิภาวะ):** ผลจาก AI เป็นร่าง ต้องให้ผู้ตรวจทบทวน, ต้องได้รับอนุญาตก่อนส่งเอกสารลูกค้าเข้า AI, จึงมีโหมดออฟไลน์สำรอง
 
@@ -114,7 +124,7 @@ Profile → Add section → Projects → ใส่ชื่อ, ลิงก์,
 | คำถาม | แนวคำตอบ |
 |---|---|
 | ทำไมไม่ใช้ ACL / IDEA / เครื่องมือของบริษัท | ใช้ได้และควรใช้ถ้ามี จุดประสงค์ของผมคือเข้าใจตรรกะการทดสอบลึกพอจะสร้างเองได้ ปรับใช้กับเครื่องมือใดก็ได้ และทำงานเฉพาะทางที่เครื่องมือทั่วไปไม่มี เช่น SoD ข้ามระบบ หรือ PDPA |
-| มั่นใจได้อย่างไรว่าเครื่องมือถูกต้อง | ข้อมูลตัวอย่างฝังความผิดปกติไว้รู้คำตอบล่วงหน้า และมีชุดทดสอบอัตโนมัติ 19 ชุดที่ตรวจว่าจับได้ครบทุกครั้งที่แก้โค้ด |
+| มั่นใจได้อย่างไรว่าเครื่องมือถูกต้อง | ข้อมูลตัวอย่างฝังความผิดปกติไว้รู้คำตอบล่วงหน้า และมีชุดทดสอบอัตโนมัติ 24 ชุดที่ตรวจว่าจับได้ครบทุกครั้งที่แก้โค้ด |
 | ความครบถ้วนของข้อมูล (completeness) | รายงาน JE เตือนให้กระทบยอดรวมกับงบทดลอง Change management ใช้ log การ deploy จริงเป็นประชากร ไม่ใช่รายการ ticket และทุกรายงานบอกว่าข้อไหนไม่ได้ตรวจเพราะข้อมูลไม่พอ |
 | ถ้าเจอ false positive เยอะ | ทุกเกณฑ์ปรับได้ตามนโยบายองค์กร และ JE ใช้คะแนนรวม ทำให้รายการที่ติดหลายเงื่อนไขขึ้นมาก่อน ส่วนรายการคะแนนต่ำใช้ดุลยพินิจ |
 | แปลความเสี่ยงทางเทคนิคเป็นภาษาธุรกิจ | ยกตัวอย่าง: "security group เปิด MySQL สู่อินเทอร์เน็ต" → "ฐานข้อมูลลูกค้าอาจถูกเข้าถึงจากภายนอก เสี่ยงต่อโทษตาม PDPA และความเสียหายต่อชื่อเสียง" |
@@ -133,9 +143,9 @@ Profile → Add section → Projects → ใส่ชื่อ, ลิงก์,
 |---|---|
 | AI for Audit | AI Policy Review (Claude API) |
 | Audit of AI | AI Governance Assessment (ISO/IEC 42001, NIST AI RMF, GenAI) |
-| Continuous assurance / data analytics | JE Testing 100% + Benford, Login anomaly, Change management |
+| Continuous assurance / data analytics | JE Testing 100% + Benford, Data Reconciliation, Login anomaly, Change management |
 | Beyond ITGC: Cybersecurity, Network, IAM | SoD ข้ามระบบ, Login anomaly, Hardening, Password policy |
-| Cloud risk | AWS Configuration Review + สคริปต์ AWS CLI |
+| Cloud risk | Multi-Cloud Review (AWS, Azure, GCP) + สคริปต์ AWS CLI / Azure CLI / gcloud |
 | Third-party & supply chain | Vendor Risk (inherent → residual) |
 | สื่อสารกับผู้บริหาร / กรรมการตรวจสอบ | Finding Tracker: aging, repeat findings, รายงานกรรมการตรวจสอบ |
 | Certifications | ← จุดที่ควรเติม: วางแผนสอบ **CISA** (และพิจารณา CISSP/CIA ภายหลัง) แล้วใส่ "CISA candidate, exam scheduled [เดือน/ปี]" ในเรซูเม่ |
