@@ -9,8 +9,9 @@ from datetime import date
 import pandas as pd
 import pytest
 
-from audit_tools import (access_review, assessment, assessment_banks, change_mgmt, cloud_aws, finding_tracker,
-                         hardening, journal_entry, login_anomaly, password_policy, policy_review, sod)
+from audit_tools import (access_review, assessment, assessment_banks, change_mgmt, cloud_aws, cloud_azure,
+                         cloud_gcp, cloud_summary, finding_tracker,
+                         hardening, journal_entry, login_anomaly, password_policy, policy_review, reconciliation, sod)
 from audit_tools.common import AuditError, parse_dates
 
 AS_OF = date(2026, 11, 5)
@@ -169,4 +170,60 @@ def test_all_reports_write():
     login_anomaly.write_report(login_anomaly.analyze(*login_anomaly.demo_frames()), io.BytesIO())
     cloud_aws.write_report(cloud_aws.analyze(cloud_aws.load_files(cloud_aws.demo_files(AS_OF))), io.BytesIO())
     hardening.write_report(hardening.review(hardening.demo_files()), io.BytesIO())
+    assert len(out.getvalue()) > 5000
+
+
+# ---------------------------------------------------------------- reconciliation
+def test_reconciliation_core_banking_to_gl():
+    src, tgt = reconciliation.demo_frames()
+    m = reconciliation.suggest_mapping(list(src.columns), list(tgt.columns))
+    assert m["txn_id"] == "TXN_REF" and m["amount"] == "AMT" and m["txn_date"] == "POST_DATE"
+    r = reconciliation.reconcile(src, tgt, reconciliation.Params(mapping=m, **reconciliation.DEMO_PARAMS))
+    c = counts(r["findings"])
+    assert c == {"REC-02": 1, "REC-03": 4, "REC-04": 2, "REC-05": 7, "REC-07": 1, "REC-08": 1}
+    assert r["stats"]["source_rows"] == r["stats"]["target_rows"] == 480     # จำนวนเท่ากันแต่ข้อมูลไม่ตรง
+    amt = r["findings"][(r["findings"]["check_id"] == "REC-05") & r["findings"]["field"].str.startswith("amount")]
+    assert len(amt) == 3 and set(amt["severity"]) == {"High"}                # 0.004 อยู่ในเกณฑ์ ไม่ถูกนับ
+
+
+def test_reconciliation_composite_key_and_leading_zeros():
+    a = pd.DataFrame({"br": ["1", "1", "2"], "no": ["001", "002", "001"], "amt": ["10", "20", "30"]})
+    b = pd.DataFrame({"BR": ["1", "1", "2"], "NO": ["1", "2", "1"], "AMT": ["10", "20", "31"]})
+    r = reconciliation.reconcile(a, b, reconciliation.Params(keys=["br", "no"], mapping={"br": "BR", "no": "NO",
+                                 "amt": "AMT"}, amount="amt", ignore_leading_zeros=True))
+    assert r["stats"]["matched"] == 3 and counts(r["findings"]) == {"REC-02": 1, "REC-05": 1}
+    with pytest.raises(AuditError):
+        reconciliation.reconcile(a, b, reconciliation.Params(keys=["br"], mapping={}))
+
+
+# ---------------------------------------------------------------- Azure / GCP / multi-cloud
+def test_azure_review():
+    r = cloud_azure.analyze(cloud_azure.load_files(cloud_azure.demo_files()))
+    c = counts(r["findings"])
+    assert c == {"AZ-01": 3, "AZ-02": 1, "AZ-03": 1, "AZ-04": 3, "AZ-05": 2, "AZ-06": 2, "AZ-07": 1, "AZ-08": 1,
+                 "AZ-09": 2, "AZ-10": 1, "AZ-11": 1, "AZ-12": 1}
+    admin = r["findings"][(r["findings"]["check_id"] == "AZ-01") & (r["findings"]["severity"] == "High")]
+    assert list(admin["resource"]) == ["somchai@corp.example"]          # admin ไม่มี MFA = High
+    assert not r["status"]
+
+
+def test_gcp_review_excludes_google_managed_accounts():
+    r = cloud_gcp.analyze(cloud_gcp.load_files(cloud_gcp.demo_files(AS_OF)), cloud_gcp.Params(as_of=AS_OF))
+    c = counts(r["findings"])
+    assert c["GCP-01"] == 1 and c["GCP-05"] == 2 and c["GCP-06"] == 1 and c["GCP-08"] == 1 and c["GCP-04"] == 1
+    sa = set(r["findings"].loc[r["findings"]["check_id"] == "GCP-03", "resource"])
+    assert not any("cloudservices" in x for x in sa) and len(sa) == 2
+    assert "old-any (prod-vpc)" not in set(r["findings"]["resource"])     # rule ที่ disabled ไม่นับ
+
+
+def test_multicloud_summary():
+    res = {"AWS": cloud_aws.analyze(cloud_aws.load_files(cloud_aws.demo_files(AS_OF)), cloud_aws.Params(as_of=AS_OF)),
+           "Azure": cloud_azure.analyze(cloud_azure.load_files(cloud_azure.demo_files())),
+           "Google Cloud": cloud_gcp.analyze(cloud_gcp.load_files(cloud_gcp.demo_files(AS_OF)),
+                                             cloud_gcp.Params(as_of=AS_OF))}
+    comb = cloud_summary.combine(res)
+    assert comb["findings"]["category"].notna().all()
+    assert len(comb["findings"]) == sum(len(r["findings"]) for r in res.values())
+    out = io.BytesIO()
+    cloud_summary.write_report(comb, out)
     assert len(out.getvalue()) > 5000
