@@ -5,16 +5,14 @@ Test the full population instead of a sample, and get audit-ready Excel workpape
 
 **ชุดเครื่องมือ 13 ตัวสำหรับผู้ตรวจสอบด้านเทคโนโลยีสารสนเทศ** ทดสอบข้อมูลทั้งประชากร 100% และออกรายงาน Excel พร้อมใช้เป็นกระดาษทำการ
 
-🌐 **Live demo:** _[ใส่ลิงก์ Streamlit ของคุณ]_ &nbsp;·&nbsp; ✅ 19 automated tests &nbsp;·&nbsp; 🇹🇭 Thai & English data supported
-
-![Home](docs/screenshot_home.png)
+🌐 **Live demo:** [it-audit-toolkit-narakorn.streamlit.app](https://it-audit-toolkit-narakorn.streamlit.app) &nbsp;·&nbsp; ✅ 19 automated tests
 
 ---
 
 ## Why this exists
 
 IT audit is moving from sample-based testing to **continuous, data-driven assurance**, and the scope keeps widening beyond ITGC into IAM, cloud, third-party and AI risk. Most audit teams still do this work with VLOOKUPs and manual checklists. This toolkit turns the most common IT audit procedures into repeatable, documented tests that any auditor can run.
-
+[![Home](docs/screenshot_home.png)](https://it-audit-toolkit-narakorn.streamlit.app)
 ## The tools
 
 | # | Tool | What it tests | Standards |
@@ -88,7 +86,7 @@ Results are indicators that support, but do not replace, professional judgment. 
 ## About the author
 
 Built by **[Your Name]**, IT Auditor with experience in ITGC, IT risk and compliance.
-💼 [LinkedIn](https://www.linkedin.com/in/your-profile) · ✉️ [your-email]
+💼 [LinkedIn](www.linkedin.com/in/narakorn-poomsuwan-4261052b2) · ✉️ [narakornpoomsuwan@gmail.com]
 
 ---
-© 2026 [Your Name]. Source available for evaluation; commercial use requires permission (see LICENSE).
+© 2026 Narakorn Poomsuwan. Source available for evaluation; commercial use requires permission (see LICENSE).
