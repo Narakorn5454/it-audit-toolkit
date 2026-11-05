@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "role": "roles/storage.objectAdmin",
+      "members": [
+        "user:finance@corp.example"
+      ]
+    }
+  ],
+  "etag": "CAE="
+}

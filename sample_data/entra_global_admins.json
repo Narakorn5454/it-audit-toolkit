@@ -1,0 +1,22 @@
+{
+  "value": [
+    {
+      "userPrincipalName": "cloud.admin@corp.example"
+    },
+    {
+      "userPrincipalName": "somchai@corp.example"
+    },
+    {
+      "userPrincipalName": "it.manager@corp.example"
+    },
+    {
+      "userPrincipalName": "ceo@corp.example"
+    },
+    {
+      "userPrincipalName": "old.admin@corp.example"
+    },
+    {
+      "userPrincipalName": "breakglass@corp.example"
+    }
+  ]
+}

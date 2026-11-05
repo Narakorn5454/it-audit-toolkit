@@ -1,0 +1,34 @@
+{
+  "value": [
+    {
+      "userPrincipalName": "cloud.admin@corp.example",
+      "isAdmin": true,
+      "isMfaRegistered": true
+    },
+    {
+      "userPrincipalName": "somchai@corp.example",
+      "isAdmin": true,
+      "isMfaRegistered": false
+    },
+    {
+      "userPrincipalName": "nida@corp.example",
+      "isAdmin": false,
+      "isMfaRegistered": true
+    },
+    {
+      "userPrincipalName": "preecha@corp.example",
+      "isAdmin": false,
+      "isMfaRegistered": false
+    },
+    {
+      "userPrincipalName": "kanya@corp.example",
+      "isAdmin": false,
+      "isMfaRegistered": true
+    },
+    {
+      "userPrincipalName": "svc.report@corp.example",
+      "isAdmin": false,
+      "isMfaRegistered": false
+    }
+  ]
+}

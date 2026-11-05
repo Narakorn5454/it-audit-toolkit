@@ -1,0 +1,8 @@
+{
+  "name": "kv-dev-test",
+  "location": "southeastasia",
+  "properties": {
+    "enableSoftDelete": true,
+    "enablePurgeProtection": null
+  }
+}

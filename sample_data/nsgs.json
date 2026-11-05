@@ -1,0 +1,68 @@
+[
+  {
+    "name": "nsg-web",
+    "location": "southeastasia",
+    "securityRules": [
+      {
+        "name": "allow-https",
+        "access": "Allow",
+        "direction": "Inbound",
+        "sourceAddressPrefix": "*",
+        "destinationPortRange": "443",
+        "protocol": "Tcp",
+        "priority": 100
+      },
+      {
+        "name": "allow-rdp",
+        "access": "Allow",
+        "direction": "Inbound",
+        "sourceAddressPrefix": "Internet",
+        "destinationPortRange": "3389",
+        "protocol": "Tcp",
+        "priority": 110
+      }
+    ]
+  },
+  {
+    "name": "nsg-db",
+    "location": "southeastasia",
+    "securityRules": [
+      {
+        "name": "sql-any",
+        "access": "Allow",
+        "direction": "Inbound",
+        "sourceAddressPrefix": "0.0.0.0/0",
+        "destinationPortRanges": [
+          "1433",
+          "5432"
+        ],
+        "protocol": "Tcp",
+        "priority": 100
+      }
+    ]
+  },
+  {
+    "name": "nsg-mgmt",
+    "location": "southeastasia",
+    "securityRules": [
+      {
+        "name": "ssh-office",
+        "access": "Allow",
+        "direction": "Inbound",
+        "sourceAddressPrefix": "203.0.113.10/32",
+        "destinationPortRange": "22",
+        "protocol": "Tcp",
+        "priority": 100
+      },
+      {
+        "name": "temp-any",
+        "access": "Allow",
+        "direction": "Inbound",
+        "sourceAddressPrefix": "*",
+        "destinationPortRange": "*",
+        "protocol": "*",
+        "priority": 4000
+      }
+    ]
+  }
+]

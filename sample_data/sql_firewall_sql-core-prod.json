@@ -1,0 +1,20 @@
+[
+  {
+    "id": "/subscriptions/3f2a1b0c-1111-2222-3333-444455556666/resourceGroups/rg-db/providers/Microsoft.Sql/servers/sql-core-prod/firewallRules/AllowAll",
+    "name": "AllowAll",
+    "startIpAddress": "0.0.0.0",
+    "endIpAddress": "255.255.255.255"
+  },
+  {
+    "id": "/subscriptions/3f2a1b0c-1111-2222-3333-444455556666/resourceGroups/rg-db/providers/Microsoft.Sql/servers/sql-core-prod/firewallRules/AllowAllWindowsAzureIps",
+    "name": "AllowAllWindowsAzureIps",
+    "startIpAddress": "0.0.0.0",
+    "endIpAddress": "0.0.0.0"
+  },
+  {
+    "id": "/subscriptions/3f2a1b0c-1111-2222-3333-444455556666/resourceGroups/rg-db/providers/Microsoft.Sql/servers/sql-core-prod/firewallRules/Office",
+    "name": "Office",
+    "startIpAddress": "203.0.113.10",
+    "endIpAddress": "203.0.113.10"
+  }
+]

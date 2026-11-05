@@ -1,0 +1,12 @@
+[
+  {
+    "name": "default",
+    "autoCreateSubnetworks": true,
+    "subnetworks": []
+  },
+  {
+    "name": "prod-vpc",
+    "autoCreateSubnetworks": false,
+    "subnetworks": []
+  }
+]

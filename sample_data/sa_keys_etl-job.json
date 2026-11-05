@@ -1,0 +1,8 @@
+[
+  {
+    "name": "projects/corp-prod-2026/serviceAccounts/etl-job@corp-prod-2026.iam.gserviceaccount.com/keys/f6e5d4c3b2a1",
+    "keyType": "USER_MANAGED",
+    "validAfterTime": "2026-10-06T00:00:00Z",
+    "keyAlgorithm": "KEY_ALG_RSA_2048"
+  }
+]

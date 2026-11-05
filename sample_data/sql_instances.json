@@ -1,0 +1,31 @@
+[
+  {
+    "name": "core-mysql",
+    "databaseVersion": "MYSQL_8_0",
+    "region": "asia-southeast1",
+    "settings": {
+      "ipConfiguration": {
+        "ipv4Enabled": true,
+        "requireSsl": false,
+        "authorizedNetworks": [
+          {
+            "value": "0.0.0.0/0",
+            "name": "anywhere"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "reporting-pg",
+    "databaseVersion": "POSTGRES_15",
+    "region": "asia-southeast1",
+    "settings": {
+      "ipConfiguration": {
+        "ipv4Enabled": false,
+        "privateNetwork": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/prod-vpc",
+        "sslMode": "ENCRYPTED_ONLY"
+      }
+    }
+  }
+]

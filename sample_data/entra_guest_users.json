@@ -1,0 +1,8 @@
+[
+  {
+    "userPrincipalName": "vendor.ops_partner.example#EXT#@corp.onmicrosoft.com"
+  },
+  {
+    "userPrincipalName": "auditor_bigfour.example#EXT#@corp.onmicrosoft.com"
+  }
+]

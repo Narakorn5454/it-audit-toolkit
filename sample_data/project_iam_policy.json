@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "etag": "BwYabc=",
+  "bindings": [
+    {
+      "role": "roles/owner",
+      "members": [
+        "user:cloud.admin@corp.example",
+        "user:somchai@corp.example",
+        "group:gcp-admins@corp.example"
+      ]
+    },
+    {
+      "role": "roles/editor",
+      "members": [
+        "user:nida@corp.example",
+        "serviceAccount:app-backend@corp-prod-2026.iam.gserviceaccount.com",
+        "serviceAccount:123456789012@cloudservices.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/storage.admin",
+      "members": [
+        "serviceAccount:etl-job@corp-prod-2026.iam.gserviceaccount.com"
+      ]
+    },
+    {
+      "role": "roles/viewer",
+      "members": [
+        "allAuthenticatedUsers",
+        "group:auditors@corp.example"
+      ]
+    },
+    {
+      "role": "roles/logging.viewer",
+      "members": [
+        "user:security@corp.example"
+      ]
+    }
+  ],
+  "auditConfigs": [
+    {
+      "service": "allServices",
+      "auditLogConfigs": [
+        {
+          "logType": "ADMIN_READ"
+        }
+      ]
+    }
+  ]
+}

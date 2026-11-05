@@ -1,0 +1,23 @@
+[
+  {
+    "name": "corppublicassets",
+    "location": "southeastasia",
+    "allowBlobPublicAccess": true,
+    "enableHttpsTrafficOnly": true,
+    "minimumTlsVersion": "TLS1_2"
+  },
+  {
+    "name": "corplegacyfiles",
+    "location": "southeastasia",
+    "allowBlobPublicAccess": false,
+    "enableHttpsTrafficOnly": false,
+    "minimumTlsVersion": "TLS1_0"
+  },
+  {
+    "name": "corpbackups",
+    "location": "southeastasia",
+    "allowBlobPublicAccess": false,
+    "enableHttpsTrafficOnly": true,
+    "minimumTlsVersion": "TLS1_2"
+  }
+]

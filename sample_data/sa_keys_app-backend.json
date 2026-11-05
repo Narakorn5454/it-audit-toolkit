@@ -1,0 +1,8 @@
+[
+  {
+    "name": "projects/corp-prod-2026/serviceAccounts/app-backend@corp-prod-2026.iam.gserviceaccount.com/keys/a1b2c3d4e5f6",
+    "keyType": "USER_MANAGED",
+    "validAfterTime": "2025-09-21T00:00:00Z",
+    "keyAlgorithm": "KEY_ALG_RSA_2048"
+  }
+]

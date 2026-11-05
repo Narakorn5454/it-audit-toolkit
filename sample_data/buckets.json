@@ -1,0 +1,23 @@
+[
+  {
+    "name": "corp-public-site",
+    "location": "ASIA-SOUTHEAST1",
+    "storage_url": "gs://corp-public-site/",
+    "uniform_bucket_level_access": true,
+    "public_access_prevention": "inherited"
+  },
+  {
+    "name": "corp-finance-exports",
+    "location": "ASIA-SOUTHEAST1",
+    "storage_url": "gs://corp-finance-exports/",
+    "uniform_bucket_level_access": false,
+    "public_access_prevention": "inherited"
+  },
+  {
+    "name": "corp-logs",
+    "location": "ASIA-SOUTHEAST1",
+    "storage_url": "gs://corp-logs/",
+    "uniform_bucket_level_access": true,
+    "public_access_prevention": "enforced"
+  }
+]

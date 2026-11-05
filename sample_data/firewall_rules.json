@@ -1,0 +1,99 @@
+[
+  {
+    "name": "default-allow-ssh",
+    "network": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/default",
+    "direction": "INGRESS",
+    "disabled": false,
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "22"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "allow-rdp-temp",
+    "network": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/prod-vpc",
+    "direction": "INGRESS",
+    "disabled": false,
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "3389"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "allow-mysql",
+    "network": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/prod-vpc",
+    "direction": "INGRESS",
+    "disabled": false,
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "3306",
+          "8080-8090"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "allow-https",
+    "network": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/prod-vpc",
+    "direction": "INGRESS",
+    "disabled": false,
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "443"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "allow-internal",
+    "network": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/prod-vpc",
+    "direction": "INGRESS",
+    "disabled": false,
+    "sourceRanges": [
+      "10.10.0.0/16"
+    ],
+    "allowed": [
+      {
+        "IPProtocol": "all"
+      }
+    ]
+  },
+  {
+    "name": "old-any",
+    "network": "https://www.googleapis.com/compute/v1/projects/corp-prod-2026/global/networks/prod-vpc",
+    "direction": "INGRESS",
+    "disabled": true,
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "allowed": [
+      {
+        "IPProtocol": "all"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "kv-corp-prod",
+  "location": "southeastasia",
+  "properties": {
+    "enableSoftDelete": true,
+    "enablePurgeProtection": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "role": "roles/storage.admin",
+      "members": [
+        "group:gcp-admins@corp.example"
+      ]
+    }
+  ],
+  "etag": "CAE="
+}
