@@ -1,0 +1,9 @@
+﻿role_a,role_b,risk
+Create Vendor,Approve Payment,สร้างผู้ขายปลอมแล้วอนุมัติจ่ายเงินเองได้
+Create PO,Approve PO,ออกและอนุมัติใบสั่งซื้อเองได้
+Approve PO,Goods Receipt,อนุมัติซื้อและรับของเองได้
+Create Payment,Approve Payment,จ่ายเงินและอนุมัติการจ่ายเองได้
+Developer,Production Deploy,พัฒนาและนำโปรแกรมขึ้นระบบจริงได้เอง
+User Admin,Approve Access,สร้าง user และอนุมัติสิทธิ์ให้ตัวเองได้
+Journal Entry,Approve Journal,บันทึกและอนุมัติรายการบัญชีเองได้
+Payroll Maintain,Payroll Approve,แก้ไขและอนุมัติเงินเดือนเองได้

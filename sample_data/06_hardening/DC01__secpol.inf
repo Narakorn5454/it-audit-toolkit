@@ -1,0 +1,19 @@
+[Unicode]
+Unicode=yes
+[System Access]
+MinimumPasswordLength = 8
+EnableGuestAccount = 1
+LSAAnonymousNameLookup = 0
+NewAdministratorName = "Administrator"
+[Registry Values]
+MACHINE\System\CurrentControlSet\Control\Lsa\LmCompatibilityLevel=4,3
+MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash=4,1
+MACHINE\System\CurrentControlSet\Control\Lsa\RestrictAnonymous=4,0
+MACHINE\System\CurrentControlSet\Control\Lsa\RestrictAnonymousSAM=4,1
+MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA=4,1
+MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\InactivityTimeoutSecs=4,0
+MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\RequireSecuritySignature=4,1
+[Privilege Rights]
+SeDebugPrivilege = *S-1-5-32-544
+SeRemoteInteractiveLogonRight = *S-1-5-32-544,*S-1-5-32-545
+SeNetworkLogonRight = *S-1-1-0,*S-1-5-32-544,*S-1-5-32-545,*S-1-5-32-551

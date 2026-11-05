@@ -1,0 +1,13 @@
+[Unicode]
+Unicode=yes
+[System Access]
+MinimumPasswordAge = 1
+MaximumPasswordAge = 60
+MinimumPasswordLength = 14
+PasswordComplexity = 1
+PasswordHistorySize = 24
+LockoutBadCount = 5
+ResetLockoutCount = 15
+LockoutDuration = 15
+ClearTextPassword = 0
+EnableGuestAccount = 0

@@ -1,0 +1,6 @@
+"""แก้ข้อมูลของคุณที่นี่ที่เดียว แล้วจะแสดงในทุกหน้าของเว็บ"""
+AUTHOR = "Narakorn"
+TITLE = "IT Auditor"
+CONTACT = "narakornpoomsuwan@gmail.com"
+LINKEDIN = "https://www.linkedin.com/in/narakorn-poomsuwan-4261052b2"
+GITHUB = "https://github.com/Narakorn5454/it-audit-toolkit"

@@ -1,0 +1,11 @@
+{
+  "trailList": [
+    {
+      "Name": "main-trail",
+      "S3BucketName": "corp-cloudtrail-logs",
+      "IsMultiRegionTrail": false,
+      "LogFileValidationEnabled": false,
+      "HomeRegion": "ap-southeast-1"
+    }
+  ]
+}

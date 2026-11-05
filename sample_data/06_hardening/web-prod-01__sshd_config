@@ -1,0 +1,8 @@
+# $OpenBSD: sshd_config
+Port 22
+PermitRootLogin yes
+PasswordAuthentication yes
+MaxAuthTries 6
+X11Forwarding yes
+ClientAliveInterval 300
+Subsystem sftp /usr/lib/openssh/sftp-server

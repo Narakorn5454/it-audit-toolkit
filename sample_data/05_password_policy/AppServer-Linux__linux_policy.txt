@@ -1,0 +1,13 @@
+# /etc/login.defs
+PASS_MAX_DAYS   99999
+PASS_MIN_DAYS   0
+PASS_WARN_AGE   7
+# /etc/security/pwquality.conf
+minlen = 12
+minclass = 3
+# /etc/security/faillock.conf
+deny = 3
+unlock_time = 900
+fail_interval = 900
+# /etc/pam.d/common-password
+password required pam_pwhistory.so remember=5 use_authtok

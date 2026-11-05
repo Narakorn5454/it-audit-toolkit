@@ -1,0 +1,4 @@
+bucket,block_public_acls,ignore_public_acls,block_public_policy,restrict_public_buckets,policy_is_public
+corp-public-website,False,False,False,False,True
+corp-cloudtrail-logs,True,True,True,True,False
+finance-reports-2026,True,True,False,False,False

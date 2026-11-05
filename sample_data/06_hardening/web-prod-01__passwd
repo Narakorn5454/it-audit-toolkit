@@ -1,0 +1,11 @@
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+www-data:x:33:33:www-data:/var/www:/bin/bash
+postgres:x:112:120:PostgreSQL:/var/lib/postgresql:/bin/bash
+backdoor:x:0:0::/home/backdoor:/bin/bash
+somchai:x:1001:1001:Somchai:/home/somchai:/bin/bash
+nida:x:1002:1002:Nida:/home/nida:/bin/bash
+tempuser::1003:1003::/home/tempuser:/bin/bash
+olddev:x:1002:1002:Old dev:/home/olddev:/bin/bash

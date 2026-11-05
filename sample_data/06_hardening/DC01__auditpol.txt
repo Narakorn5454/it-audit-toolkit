@@ -1,0 +1,20 @@
+System audit policy
+Category/Subcategory                      Setting
+System
+  Security State Change                   Success
+Logon/Logoff
+  Logon                                   Success
+  Logoff                                  Success
+  Account Lockout                         Success
+  Special Logon                           Success
+Privilege Use
+  Sensitive Privilege Use                 No Auditing
+Detailed Tracking
+  Process Creation                        No Auditing
+Policy Change
+  Audit Policy Change                     Success
+Account Management
+  User Account Management                 Success and Failure
+  Security Group Management               Success
+Account Logon
+  Credential Validation                   Success and Failure

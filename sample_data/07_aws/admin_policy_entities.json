@@ -1,0 +1,17 @@
+{
+  "PolicyGroups": [
+    {
+      "GroupName": "Admins"
+    }
+  ],
+  "PolicyUsers": [
+    {
+      "UserName": "bob"
+    }
+  ],
+  "PolicyRoles": [
+    {
+      "RoleName": "OrganizationAccountAccessRole"
+    }
+  ]
+}

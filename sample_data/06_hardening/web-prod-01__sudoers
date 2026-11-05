@@ -1,0 +1,5 @@
+Defaults env_reset
+root    ALL=(ALL:ALL) ALL
+%sudo   ALL=(ALL:ALL) ALL
+deploy  ALL=(ALL) NOPASSWD: ALL
+nida    ALL=(ALL) ALL
