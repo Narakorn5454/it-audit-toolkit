@@ -6,13 +6,13 @@ from audit_tools import __version__, config
 st.set_page_config(page_title="IT Audit Toolkit", page_icon="🧰", layout="wide")
 
 st.title("🧰 IT Audit Toolkit")
-st.write("ชุดเครื่องมือช่วยงานตรวจสอบด้านเทคโนโลยีสารสนเทศ 13 เครื่องมือ ครอบคลุม ITGC, Cybersecurity & IAM, Cloud, "
+st.write("ชุดเครื่องมือช่วยงานตรวจสอบด้านเทคโนโลยีสารสนเทศ 14 เครื่องมือ ครอบคลุม ITGC, Cybersecurity & IAM, Cloud, "
          "Data Analytics, Third-party risk และ AI Governance — ทดสอบข้อมูลทั้งประชากร (100%) แทนการสุ่มตัวอย่าง "
          "และออกรายงาน Excel พร้อมใช้เป็นกระดาษทำการ")
 st.caption(f"พัฒนาโดย {config.AUTHOR} · {config.TITLE} · v{__version__}")
 
 c = st.columns(4)
-c[0].metric("เครื่องมือ", "13")
+c[0].metric("เครื่องมือ", "14")
 c[1].metric("รายการตรวจ/คำถาม", "200+")
 c[2].metric("มาตรฐานที่อ้างอิง", "10+")
 c[3].metric("ทุกหน้ามีข้อมูลตัวอย่าง", "✓")
@@ -25,11 +25,14 @@ GROUPS = [
         ("pages/05_Password_Policy.py", "Password Policy Review", "🔑", "Windows / AD / Linux / ระบบงาน เทียบเกณฑ์"),
         ("pages/06_System_Hardening.py", "System Hardening Review", "🛡️", "Windows + Linux แนว CIS Benchmark"),
     ]),
-    ("🔄 IT Operations & Change", [
+    ("🔄 Application, Change & Data Integrity", [
         ("pages/03_Change_Management.py", "Change Management Review", "🔄", "Deployment log เทียบใบคำขอ ITSM"),
+        ("pages/14_Data_Reconciliation.py", "Interface & Data Reconciliation", "🔁",
+         "กระทบยอดข้อมูลระหว่างระบบ / Data migration"),
     ]),
     ("☁️ Cloud & Third-party", [
-        ("pages/07_Cloud_AWS_Review.py", "AWS Cloud Configuration Review", "☁️", "IAM, MFA, Security group, S3, CloudTrail"),
+        ("pages/07_Cloud_Configuration_Review.py", "Multi-Cloud Configuration Review", "☁️",
+         "AWS · Azure · Google Cloud — IAM, MFA, network, storage, logging"),
         ("pages/10_Vendor_Risk.py", "Vendor Risk Assessment", "🤝", "Inherent → Residual risk + แบบสอบถาม Excel"),
     ]),
     ("📊 Data Analytics & Continuous Auditing", [
@@ -67,7 +70,7 @@ st.subheader("📚 มาตรฐานที่อ้างอิง")
 st.dataframe(pd.DataFrame([
     ("ITGC / COBIT 2019", "Logical access, Change management, IT operations"),
     ("ISO/IEC 27001:2022", "Annex A: 5.15–5.18, 5.19–5.23, 5.24–5.28, 8.2, 8.5, 8.9, 8.13, 8.15–8.16, 8.32"),
-    ("CIS Benchmarks", "Windows, Linux, AWS Foundations"),
+    ("CIS Benchmarks", "Windows, Linux, AWS / Azure / GCP Foundations"),
     ("ISA 240 / TSA 240", "Journal entry testing — management override of controls"),
     ("พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562", "มาตรา 19–42 และประกาศมาตรการรักษาความมั่นคงปลอดภัย พ.ศ. 2565"),
     ("ISO/IEC 42001:2023 · NIST AI RMF 1.0 · NIST AI 600-1", "AI management system และ Generative AI"),
