@@ -5,7 +5,7 @@ Test the full population instead of a sample, and get audit-ready Excel workpape
 
 **ชุดเครื่องมือ 13 ตัวสำหรับผู้ตรวจสอบด้านเทคโนโลยีสารสนเทศ** ทดสอบข้อมูลทั้งประชากร 100% และออกรายงาน Excel พร้อมใช้เป็นกระดาษทำการ
 
-🌐 **Live demo:** [it-audit-toolkit-narakorn.streamlit.app](https://it-audit-toolkit-narakorn.streamlit.app) &nbsp;·&nbsp; ✅ 19 automated tests
+🌐 **Live demo:** [it-audit-toolkit-narakorn.streamlit.app](https://it-audit-toolkit-narakorn.streamlit.app) &nbsp;·&nbsp; ✅ 21 automated tests
 
 ---
 
@@ -23,7 +23,7 @@ IT audit is moving from sample-based testing to **continuous, data-driven assura
 | 4 | 🕵️ **Login Anomaly Detection** | Brute force, password spraying, success after failures, impossible travel, disabled-account logins | ISO 27001 A.8.15–16, NIST CSF DE.CM |
 | 5 | 🔑 **Password Policy Review** | Parses secedit, `net accounts`, AD policy, login.defs / PAM; compares against a configurable baseline | ISO 27001 A.5.17, CIS |
 | 6 | 🛡️ **System Hardening** | Windows (secedit, auditpol) and Linux (sshd, passwd, sudoers) against CIS-style rules | CIS Benchmarks, ISO 27001 A.8.9 |
-| 7 | ☁️ **AWS Cloud Review** | Root MFA and keys, IAM MFA, key rotation, unused credentials, open security groups, public S3, CloudTrail | CIS AWS Foundations |
+| 7 | ☁️ **Multi-Cloud Configuration Review** | **AWS** (root MFA/keys, IAM MFA, key rotation, security groups, S3, CloudTrail) · **Azure** (Entra MFA, Global Admins, guests, RBAC owners, NSG, storage, SQL firewall, Defender, Key Vault) · **Google Cloud** (IAM basic roles, public bindings, SA keys, firewall, buckets, Cloud SQL, audit logs) · cross-cloud risk comparison | CIS AWS / Azure / GCP Foundations |
 | 8 | 📒 **Journal Entry Testing** | 14 risk-scored tests + **Benford's Law** + sequence gaps; SAP-ready | ISA 240 / TSA 240 |
 | 9 | 🇹🇭 **PDPA Readiness** | 29 questions across 10 domains of Thailand's PDPA | PDPA s.19–42 |
 | 10 | 🤝 **Vendor Risk** | Inherent → residual risk, review frequency, questionnaire round-trip | ISO 27001 A.5.19–5.23 |
