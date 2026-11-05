@@ -23,8 +23,7 @@ GROUPS = [
     ]),
     ("🔄 Application, Change & Data Integrity", [
         ("pages/03_Change_Management.py", "Change Management Review", "🔄", "Deployment log เทียบใบคำขอ ITSM"),
-        ("pages/14_Data_Reconciliation.py", "Interface & Data Reconciliation", "🔁",
-         "กระทบยอดข้อมูลระหว่างระบบ / Data migration"),
+        
     ]),
     ("☁️ Cloud & Third-party", [
         ("pages/07_Cloud_Configuration_Review.py", "Multi-Cloud Configuration Review", "☁️",
